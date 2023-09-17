@@ -8,8 +8,14 @@ st.markdown("<h1 style='text-align: center;'>Annual Salary Predictor</h1>", unsa
 
 gen_list = ["Female", "Male"]
 edu_list = ["Bachelor's", "Master's", "PhD"]
-job_list = ["Director of Marketing", "Director of Operations", "Senior Data Scientist", "Senior Financial Analyst", "Senior Software Engineer"]
-job_idx = [0, 1, 10, 11, 20]
+job_list = ['Director of Marketing', 'Director of Operations', 'Junior Business Analyst', 
+            'Junior Business Development Associate', 'Junior Financial Analyst', 
+            'Junior Marketing Coordinator', 'Junior Marketing Specialist', 'Junior Operations Analyst', 
+            'Junior Project Manager', 'Senior Business Analyst', 'Senior Data Scientist', 
+            'Senior Financial Analyst', 'Senior Financial Manager', 'Senior Marketing Analyst', 
+            'Senior Marketing Manager', 'Senior Operations Manager', 'Senior Product Designer', 
+            'Senior Product Manager', 'Senior Project Coordinator', 'Senior Project Manager', 
+            'Senior Software Engineer']
 
 gender = st.radio('Pick your gender', gen_list)
 age = st.slider('Pick your age', 21, 55)
@@ -32,7 +38,7 @@ with col14:
 if(predict_btn):
     inp1 = int(age)
     inp2 = float(experience)
-    inp3 = int(job_idx[job_list.index(job)])
+    inp3 = int(job_list.index(job))
     inp4 = int(edu_list.index(education))
     inp5 = int(gen_list.index(gender))
     X = [inp1, inp2, inp3, inp4, inp5]

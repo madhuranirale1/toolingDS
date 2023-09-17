@@ -42,7 +42,7 @@ st.write(data.describe())
 # Display a heatmap to visualize correlations
 st.write("### Correlation Heatmap")
 corr_matrix = data.corr()
-plt.figure(figsize=(2, 2))
+#plt.figure(figsize=(2, 2))
 fig, ax = plt.subplots()
 sns.heatmap(corr_matrix, annot=True, cmap="coolwarm", ax=ax)
 st.pyplot(fig)

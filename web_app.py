@@ -4,29 +4,7 @@ import streamlit as st
 
 model = pickle.load(open('model.pkl', 'rb'))
 
-col0, col1, col2, col3, col4, col5, col6 = st.columns(7)
-with col0:
-    st.write('')
-with col1:
-    st.write('')
-with col2:
-    st.write('')    
-with col3:
-    st.title("ⴍage") 
-with col4:
-    st.write('')
-with col5:
-    st.write('')
-with col6:
-    st.write('')
-
-col7, col8, col9 = st.columns(3)
-with col7:
-    st.write('')    
-with col8:
-    st.markdown("<h6 style='text-align: center;'>A simple web app to predict annual salary</h6>", unsafe_allow_html=True)
-with col9:
-    st.write('')
+st.markdown("<h1 style='text-align: center;'>Annual Salary Predictor</h1>", unsafe_allow_html=True)
 
 gen_list = ["Female", "Male"]
 edu_list = ["Bachelor's", "Master's", "PhD"]
